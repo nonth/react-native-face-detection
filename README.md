@@ -1,6 +1,6 @@
 # react-native-face-detection
 
-react-native face detection using [Google MLKit](https://developers.google.com/ml-kit).
+react-native face detection using [Google ML Kit](https://developers.google.com/ml-kit).
 
 Some part of the code is from react-native-firebase ml-vision package ([version 6.4.0](https://github.com/invertase/react-native-firebase/tree/v6.4.0/packages/ml-vision)) but due to Google separate Firebase ML Kit into [Google ML Kit](https://developers.google.com/ml-kit) and [Firebase Machine Learning](https://firebase.google.com/docs/ml) then the ml-vision will no longer available on react-native-firebase.
 
