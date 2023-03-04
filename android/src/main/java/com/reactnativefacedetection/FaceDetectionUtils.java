@@ -54,15 +54,18 @@ public class FaceDetectionUtils {
         return faceLandmarkMap;
     }
 
-    public static float[] getPointMap(PointF point) {
-        return new float[]{point.x, point.y};
+    public static Map<String, Float> getPointMap(PointF point) {
+        Map<String, Float> newPoint= new HashMap<String, Float>();
+        newPoint.put("x", point.x);
+        newPoint.put("y", point.y);
+        return newPoint;
     }
 
     public static Map<String, Object> getContourMap(FaceContour faceContour) {
         Map<String, Object> faceContourMap = new HashMap<>();
 
         List<PointF> pointsListRaw = faceContour.getPoints();
-        List<float[]> pointsListFormatted = new ArrayList<>(pointsListRaw.size());
+        List<Map> pointsListFormatted = new ArrayList<>(pointsListRaw.size());
 
         for (PointF pointRaw : pointsListRaw) {
             pointsListFormatted.add(getPointMap(pointRaw));
